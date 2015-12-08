@@ -1,0 +1,294 @@
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 18px;
+  background-color: #FFF;
+  text-align: center;
+}
+
+/* Hyperlinks */
+
+a {
+  color: #A52A2A;
+  text-decoration: none;
+  transition: color .15s ease-in-out;
+  -moz-transition: color .15s ease-in-out;
+  -webkit-transition: color .15s ease-in-out;
+}
+
+a:hover {
+  color: #000;
+}
+
+/* Embeds */
+
+.video {
+  display: block;
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video > iframe {
+  position: absolute;
+  top: 0px; left: 0px;
+  width: 100%; height: 100%;
+}
+
+/* Pygments */
+
+div.highlight {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  margin: 1em 0;
+  padding: 6px 10px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+pre, code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  white-space: normal;
+}
+
+div.highlight pre, div.highlight code {
+  white-space: pre;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+/* MathJax */
+
+code.mathjax .MathJax_Display {
+  text-align: left !important;
+}
+
+/* Site */
+
+.site {
+  text-align: left;
+  width: 90%;
+  max-width: 50em;
+  margin: 3em auto 2em;
+  line-height: 1.5em;
+}
+
+.site .header svg {
+  width: 3em;
+  height: 3em;
+  margin-bottom: 1em;
+}
+
+.site .header a {
+  fill: #000;
+}
+
+.site .header a:hover {
+  fill: #a00;
+}
+
+.site .meta {
+  color: #aaa;
+}
+
+.site .footer {
+  font-size: 80%;
+  color: #666;
+  border-top: 1px solid #000;
+  margin-top: 2em;
+  overflow: hidden;
+}
+
+.site .footer .contact {
+  float: left;
+  margin-right: 3em;
+}
+
+.site .footer .contact a {
+  color: #8085C1;
+  margin-right: 0.5em;
+}
+
+/* Intro */
+
+
+/* Home */
+
+.home {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 130;
+
+}
+
+.home .intro .title {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 130;
+
+  margin-bottom: 1.5em;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  text-align: left;
+}
+
+.home .intro .subtitle {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 130;
+  padding-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 1.00em;
+  line-height: 1.25em;
+  text-align: left;
+}
+
+.home .intro .heavy {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.75em;
+  margin-bottom: 0.3em;
+}
+
+.home .intro ul.awards {
+  font-family: "HelveticaNeue-Medium", "HelveticaNeue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.65em;
+  list-style-type: square;
+}
+
+.home .intro ul.coursework li {
+  line-height: 0.5em;
+  margin-bottom: 1em;
+  margin-left: 1.5em;
+}
+
+.home .intro .heavyend {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.75em;
+  padding-top: 0.5em;
+  margin-bottom: 0.3em;
+}
+
+
+.home .intro .good {
+  color: #0000FF;
+}
+
+.home .intro .bad {
+  color: #a00;
+}
+
+.home .intro .smaller_intro {
+  font-size: 0.75em;
+  line-height: 1.00em;
+  margin-bottom: 0.75em;
+}
+
+.home .intro .smallerer_intro {
+  font-size: 0.65em;
+  line-height: 1.00em;
+  margin-bottom: 0.75em;
+}
+
+.home .intro .internship_details {
+  font-size: 0.65em;
+  line-height: 1.20em;
+  width: 70%;
+  margin-bottom: 0.75em;
+}
+
+.home .intro {
+  margin-bottom: 1.5em;
+  font-size: 1.25em;
+  line-height: 0.75em;
+  text-align: left;
+}
+
+.home .intro ul.coursework {
+  font-family: "HelveticaNeue-Light", "HelveticaNeue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.65em;
+  list-style-type: square;
+}
+
+.home .intro ul.coursework li {
+  line-height: 1.0em;
+  margin-bottom: 0.75em;
+  margin-left: 1.5em;
+}
+
+.home .intro ul.coursework span.date {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 0.8em;
+}
+
+
+
+.home .intro p {
+  margin: 0.5em 0;
+}
+
+.home hr {
+  display: block;
+  max-width: 30em;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #000;
+}
+
+.home ul.posts {
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding-top: 1.5em;
+  list-style-type: none;
+}
+
+.home ul.posts li {
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+
+.home ul.posts span.date {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 0.8em;
+}
+
+.home ul.posts span.test {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 38em) {
+    body {
+      font-size: 16px;
+    }
+    .home ul.posts span.date {
+        display: block;
+    }
+    .home ul.posts span.dash {
+        display: none;
+    }
+}
+
+/* Posts */
+
+h1.title, .post h1, h2, h3 {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  margin: 0.5em 0;
+  line-height: 1.2em;
+}
+
+.post p {
+  margin: 1em 0;
+}
+
+.post img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.post ul, .post ol {
+  margin-left: 1.35em;
+}

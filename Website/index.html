@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CS 194 - Project 5</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="r_syntax.css">
+    <link rel="stylesheet" href="r_main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="site">
+        <div class="home">
+          <div class="intro">
+		  		  <span class = "title">Face Morphing</span>
+		  		  <div class = "smaller_intro">CS 194 - Project 5 - Kuriakose Sony Theakanath</div>
+		  		  <hr/>
+            <div class = "subtitle">Overview</div>
+              <div class = "internship_details">The goal of this assignment is to implement the much coveted "Face Morphing" algorithm. A morph is a simultaneous warp of the image shape and a cross-dissolve of the image colors. The warp is controlled by defining a correspondence between the two pictures. The correspondence should map eyes to eyes, mouth to mouth, chin to chin, ears to ears, etc., to get the smoothest transformations possible.
+              <br/><br/>
+              Now let's look at some results!
+              </div>
+            <div class = "subtitle">How the Algorithm Works</div>
+              <div class = "internship_details">
+              In order to use this algorithm, there were several steps taken. The first step is to define the corresponding points between the two images by hand. This means selecting the defining features of each of the faces and matching it up with the second picture. A Delaunay triangulation is used in order to create "triangles", from the points selected. 
+              <br/><br/>
+              The second part of of computing the morph is computing the mid-way face of the images. This involves computing the average shape, and then warping the two faces into the shape, and then finally averaging the colors together. In order to do this we use a affine warp for every single triangle, thus moving it to the new shape. 
+              <br/><br/>
+              The third part for this is to do the morph sequence which requires a warp between the first image and the second image using the point correspondences defined in the previous step.
+              <br/><br/>
+              And finally we have our morphed image! Lots of fun (and clicking)! 
+              </div>
+            <div class = "subtitle">Sony and Nik</div>
+              <div class = "internship_details">
+           	  <b>Sony Theakanath - Original</b><br/><br/>
+              <img src="images/sony.jpg" style="width:400px;height:422px;"></br></br>
+              <b>Nik Mathur - Original</b></br></br>
+              <img src="images/nik.jpg" style="width:400px;height:422px;"></br></br>
+              <b>Mathuriakose - Mid-way face</b></br></br>
+              <img src="images/midwayniksony.jpg" style="width:400px;height:422px;"></br></br>
+              <b>Mathuriakose - Morph Sequence</b></br></br>
+              <img src="images/mathuriakose.gif" style="width:400px;height:422px;">
+              <br/><br/>
+              As seen here, all of these turned out pretty well! One odd part was Nik's neck, which was significantly wider than mine. Because his was bigger, it looked odd during the morph since there is a lot of space to cover in between for the morph. Another issue was the triangulation, which caused a line on the bottom right. Otherwise, the morph turned out pretty well!
+              </div>
+            <div class = "subtitle">Obama and Person</div>
+              
+              <div class = "internship_details">
+              Let's do one more example before moving on!
+              <br/><br/>
+              <b>Obama - Original</b><br/><br/>
+              <img src="images/obama.jpg" style="width:444px;height:444px;"></br></br>
+              <b>Person - Original</b></br></br>
+              <img src="images/person.jpg" style="width:444px;height:444px;"></br></br>
+              <b>Ooo Person - Morph Sequence</b></br></br>
+              <img src="images/operson.gif" style="width:444px;height:444px;">
+              </div>
+            <div class = "subtitle">Mean Face of the Brazilian Population</div>
+              <div class = "internship_details">
+              For this portion of the assignment we will be working with the FEI Face Database, which is a Brazilian face database that contains a set of face images taken between June 2005 and March 2006 at the Artificial Intelligence Laboratory of FEI in São Bernardo do Campo.  
+              <br/><br/>
+              We will be computing the the average face shape of all 100 faces given to the research project. After that, we will morph 2 of the faces in the dataset into the average shape and see what that looks like. And lastly, we'll see how it looks when my face is warped into the average face and visa-versa. 
+              </br></br>
+              We first have to calculate the average shape of the face. This is done by calculating the average shape and then selecting the corresponding points. Next we show our average face of the Brazilian population. 
+              </br></br>
+              <b>Average Face of the Brazilian Population</b></br></br>
+              <img src="images/average_brazil.png" style="width:260px;height:360px;"></br></br>
+              <b>Person 1 Shaped to Average Shape</b></br></br>
+              <img src="images/p1tomean.GIF" style="width:250px;height:360px;"></br></br>
+              <b>Person 2 Shaped to Average Shape</b></br></br>
+              <img src="images/p2tomean.GIF" style="width:250px;height:360px;"></br></br>
+              <b>Me Shaped to Average Shape and Back</b></br></br>
+              <img src="images/sonymean.GIF" style="width:250px;height:360px;">
+              <br/><br/>
+              As we can see here, the average face of the Brazilian population have very large eyes (wide too), and defined eyebrows. When we run the app on the two people provided, we can see a definite change, but not too much as they are pretty close to the average. Compared to the output with me on the average shape, it comes out as more of a drastic change as I have less similar features to the Brazilian population.
+              </div>
+            <div class = "subtitle">Caricature of Me and Brazilian Population</div>
+              <div class = "internship_details">
+                  The main point I drew from the Brazilian population was the bigger eyes. I decided to go crazy and change the alpha value to a higher value whilst at the same time changing the warp to extend to a larger size, thus giving me fish eyes! This was super fun.
+                  </br></br>
+                  <img src="images/LOL.jpg" style="width:400px;height:422px;">
+              </div>
+            <div class = "subtitle">Bells and Whistles 1: Music Video Morph with Roommates!</div>
+              <div class = "internship_details">
+              My roommates were super excited about this project so I decided to morph all of us together! 
+              </br></br>
+              <iframe width="420" height="315" src="https://www.youtube.com/embed/UaRIjIotSoA?loop=1" frameborder="0" allowfullscreen></iframe>
+              </div>
+            <div class = "subtitle">Bells and Whistles 2: Morph with Classmates</div>
+              <div class = "internship_details">
+                We have collaborated to morph the class together. I contributed by creating the morph from my face to Michael Ambrose. Jiang Guo will combine these GIFs, and upload a video on Sunday. Please check Piazza for the uploaded video. 
+              </div>
+            <div class = "subtitle">Conclusion</div>
+              <div class = "internship_details">
+                This was a super fun project that allowed me to learn about triangulation and how morphing works! So far I would say that this is the best project I have done in CS 194-26. Now I understand how companies such as Snapchat do their live photo filter, in order to morph our faces into their weird filters. Cool stuff!
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
